@@ -37,9 +37,36 @@ void Canvas::ParseFromString(const std::string& serialzation) {
 }
 
 const std::string Canvas::SerializeToString() const {
-  std::string serialzation;
-  CHECK(polygon_.SerializeToString(&serialzation)) << "Canvas serialization failed.";
-  return serialzation;
+  std::string serialization;
+  CHECK(polygon_.SerializeToString(&serialization)) << "Canvas serialization failed.";
+  return serialization;
+}
+
+const geometry::Polyline Canvas::BuildPolyline() const {
+  geometry::Polyline polyline;
+  for (const auto& p : polygon_.point()) {
+    auto* point = polyline.add_point();
+    point->CopyFrom(p);
+  }
+  return polyline;
+}
+
+namespace {
+double Sqr(double x) {
+  return x * x;
+}
+}
+
+double GetDistance(const Point3D& p1, const Point3D& p2) {
+  return std::sqrt(Sqr(p1.x() - p2.x()) + Sqr(p1.y() - p2.y()) + Sqr(p1.z() - p2.z()));
+}
+
+double GetLength(const geometry::Polyline& polyline) {
+  double len = 0;
+  for (int i = 1; i < polyline.point_size(); i++) {
+    len += GetDistance(polyline.point(i - 1), polyline.point(i));
+  }
+  return len;
 }
 
 }  // namespace homework1

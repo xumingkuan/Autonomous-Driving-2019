@@ -22,9 +22,14 @@ class Canvas {
   void ParseFromString(const std::string& serialzation);
   const std::string SerializeToString() const;
 
+  const geometry::Polyline BuildPolyline() const;
+
  private:
   homework1::geometry::Polygon polygon_;
 };
+
+double GetDistance(const geometry::Point3D& p1, const geometry::Point3D& p2);
+double GetLength(const geometry::Polyline& polyline);
 
 }  // namespace homework1
 
