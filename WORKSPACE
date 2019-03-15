@@ -132,3 +132,15 @@ new_http_archive(
         "https://github.com/fmtlib/fmt/archive/4.1.0.tar.gz",
     ],
 )
+
+# nanoflann
+pony_http_archive(
+    name = "nanoflann",
+    build_file = "utils/bazel/nanoflann.BUILD",
+    patch_file = "utils/bazel/nanoflann.patch",
+    sha256 = "5ef4dfb23872379fe9eb306aabd19c9df4cae852b72a923af01aea5e8d7a59c3",
+    urls = [
+        "https://github.com/jlblancoc/nanoflann/archive/v1.2.3.tar.gz",
+    ],
+    strip_prefix = "nanoflann-1.2.3",
+)
