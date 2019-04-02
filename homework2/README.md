@@ -22,7 +22,7 @@ When we want to rotate something in 3D space, we have many representations for t
 
 Your task is to implement the conversion from rotation matrix to roll-pitch-yaw and angle-axis representations. For roll-pitch-yaw representation, the rotation intrinsic is roll->pitch->yaw. That is, the rotation sequence is **R(yaw) * R(pitch) * R(roll)**. There may be multiple solutions for the input. You can add a reasonable constraint to the result to get the test passed. For example, you can require `roll >= 0`.
 
-**What to submit:** Your C++ implementation of rotation/rotation_test.cc to pass the unit tests non-trivially. Note, you should implement the conversion by yourself instead of using any existing APIs.
+**What to submit:** Your C++ implementation of rotation/rotation.cc to pass the unit tests non-trivially. Note, you should implement the conversion by yourself instead of using any existing APIs.
 
 
 ### 3. Chessboard distortion
