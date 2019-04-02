@@ -8,3 +8,12 @@ cc_binary(
         "@opencv//:highgui",
     ],
 )
+
+cc_binary(
+    name = "distort",
+    srcs = ["distort.cc"],
+    deps = [
+        "@opencv//:core",
+        "@opencv//:highgui",
+    ],
+)

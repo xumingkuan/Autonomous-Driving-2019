@@ -28,6 +28,14 @@ TEST(Rotation, RollPitchYawTest) {
   EXPECT_NEAR(0.1, roll_pitch_yaw.x(), 1e-3);
   EXPECT_NEAR(-0.2, roll_pitch_yaw.y(), 1e-3);
   EXPECT_NEAR(0.3, roll_pitch_yaw.z(), 1e-3);
+
+  rotation << 0, 0, 1,
+              0, 1, 0,
+              -1, 0, 0;
+  roll_pitch_yaw = ToRollPitchYaw(rotation);
+  EXPECT_NEAR(0, roll_pitch_yaw.x(), 1e-3);
+  EXPECT_NEAR(M_PI_2, roll_pitch_yaw.y(), 1e-3);
+  EXPECT_NEAR(0, roll_pitch_yaw.z(), 1e-3);
 }
 
 TEST(Rotation, AngleAxisTest) {

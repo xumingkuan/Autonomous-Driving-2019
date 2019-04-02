@@ -49,3 +49,21 @@ void WritePointcloudToTextFile(const PointCloud& pointcloud, const std::string& 
   }
   fout.close();
 }
+
+void WritePointcloudRangeToTextFile(const PointCloud& pointcloud, const std::string& file_name) {
+  std::ofstream fout(file_name);
+  for (int i = 0; i < pointcloud.points.size(); ++i) {
+    const Eigen::Vector3d& pt = pointcloud.points[i];
+    fout << std::sqrt(pt.x() * pt.x() + pt.y() * pt.y() + pt.z() * pt.z()) << std::endl;
+  }
+  fout.close();
+}
+
+void WritePointcloudHeightToTextFile(const PointCloud& pointcloud, const std::string& file_name) {
+  std::ofstream fout(file_name);
+  for (int i = 0; i < pointcloud.points.size(); ++i) {
+    const Eigen::Vector3d& pt = pointcloud.points[i];
+    fout << pt.z() << std::endl;
+  }
+  fout.close();
+}

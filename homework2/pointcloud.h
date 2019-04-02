@@ -18,3 +18,5 @@ struct PointCloud {
 
 PointCloud ReadPointCloudFromTextFile(const std::string& file_name);
 void WritePointcloudToTextFile(const PointCloud& pointcloud, const std::string& file_name);
+void WritePointcloudRangeToTextFile(const PointCloud& pointcloud, const std::string& file_name);
+void WritePointcloudHeightToTextFile(const PointCloud& pointcloud, const std::string& file_name);

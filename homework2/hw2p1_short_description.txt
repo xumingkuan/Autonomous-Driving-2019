@@ -1,0 +1,2 @@
+The smaller the range is, the denser the points are.
+Most points has height around -2m, which may be the ground. Points get sparser as the height increases.
