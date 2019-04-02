@@ -93,8 +93,8 @@ double Icp::EstimatePose() {
   Eigen::MatrixXd p(3, active_pt_num);
   Eigen::MatrixXd q(3, active_pt_num);
   for (int i = 0; i < active_pt_num; i++) {
-    p.col(i) = transformed_src_points_.col(i);
-    q.col(i) = target_points_.col(i);
+    p.col(i) = transformed_src_points_.col(correspondences_[i].query_index);
+    q.col(i) = target_points_.col(correspondences_[i].match_index);
   }
 
   // 2. Find the centroid and demean source/target point matrix;
