@@ -8,7 +8,6 @@
 #include "common/utils/math/math_utils.h"
 #include "common/utils/math/transform/transform.h"
 
-class MatrixXd;
 Icp::Icp(const PointCloud& src_pc, const PointCloud& target_pc) {
   src_points_ = Eigen::MatrixXd::Zero(3, src_pc.points.size());
   for (int i = 0; i < src_pc.points.size(); ++i) {
