@@ -11,7 +11,7 @@ You need to press `N` to go to the next frame and immediately after launching th
 
 ### 1. Ground detection.
 
-The first step of detection is ground detection. You need to replace the fake implementation placed inside `singe_frame_detector.cc` inside function `GetGroundAndObstacles`. The ground points will be shown in blue. You can either estimate the ground heights based on the single frame data or use a pre-generated ground height set based on the whole data set. If you choose the latter way, Please also submit the code you wrote to get that.
+The first step of detection is ground detection. You need to replace the fake implementation placed inside `single_frame_detector.cc` inside function `GetGroundAndObstacles`. The ground points will be shown in blue. You can either estimate the ground heights based on the single frame data or use a pre-generated ground height set based on the whole data set. If you choose the latter way, Please also submit the code you wrote to get that.
 
 Notes:
 
