@@ -10,7 +10,7 @@
 #include "homework3/single_frame_detector.h"
 
 DEFINE_string(pony_data_dir,
-    "/home/xmk/ponyai/PublicCourse/homework3/data/20180223/nanian/134810/",
+    "/home/xmk/ponyai/PublicCourse/homework3/data/20180223/nanian/170054/",
     "The path of pony data.");
 
 int main(int argc, char* argv[]) {

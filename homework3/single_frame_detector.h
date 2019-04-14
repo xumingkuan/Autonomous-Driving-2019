@@ -2,6 +2,7 @@
 
 #pragma once
 
+#include <deque>
 #include <string>
 #include <vector>
 
@@ -19,4 +20,8 @@ class SingleFrameDetector {
       const PointCloud& point_cloud,
       std::vector<Eigen::Vector3d>* ground_points,
       std::vector<Obstacle>* obstacles);
+
+ private:
+  std::deque<std::pair<Eigen::MatrixXd, std::pair<int, int> > > prev_grids_;
+  int prev_max_num_frame_;
 };
