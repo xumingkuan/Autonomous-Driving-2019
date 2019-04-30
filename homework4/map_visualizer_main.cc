@@ -6,8 +6,12 @@
 #include "homework4/display/main_window.h"
 #include "homework4/map/map_lib.h"
 
-DEFINE_string(route_file_path, "", "Path of displayed route");
-DEFINE_string(map_dir, "", "Directory path of map file");
+DEFINE_string(route_file_path, "/home/xmk/ponyai/PublicCourse/homework4/data/routes/sample1.txt",
+    "Path of displayed route");
+DEFINE_string(map_dir, "/home/xmk/ponyai/PublicCourse/homework4/map/grid2/",
+    "Directory path of map file");
+// DEFINE_string(texture_dir, "/home/xmk/ponyai/PublicCourse/homework4/data/textures/",
+//     "Directory path of texture file");
 
 int main(int argc, char* argv[]) {
   google::ParseCommandLineFlags(&argc, &argv, true);

@@ -25,6 +25,9 @@ class MapLib {
   }
 
   const interface::map::Map& map_proto() const { return map_data_; }
+  std::unique_ptr<interface::map::Map> mutable_map_proto() {
+    return std::make_unique<interface::map::Map>(map_data_);
+  }
 
  private:
   interface::map::Map map_data_;

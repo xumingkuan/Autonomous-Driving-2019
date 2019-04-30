@@ -213,6 +213,9 @@ std::string GetProjectRootPath() {
   if (!proj_root_path.empty()) {
     return proj_root_path.string();
   }
+  // TODO(mingkuan): non-portable implementation
+  return "/home/xmk/ponyai/PublicCourse/";
+
   // Try current path of the ancestor processes
   for (int pid = getpid(); pid;) {
     path = boost::filesystem::read_symlink("/proc/" + std::to_string(pid) + "/cwd");
