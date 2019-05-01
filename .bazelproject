@@ -14,4 +14,5 @@ targets:
   //homework3:single_frame_detector_main
   //homework4:map_lane_processor_main
   //homework4:map_visualizer_main
+  //homework4:route_finder_main
   //homework5:simulation_main

@@ -6,7 +6,8 @@
 #include "homework4/display/main_window.h"
 #include "homework4/map/map_lib.h"
 
-DEFINE_string(route_file_path, "/home/xmk/ponyai/PublicCourse/homework4/data/routes/sample1.txt",
+DEFINE_string(route_file_path,
+    "/home/xmk/ponyai/PublicCourse/homework4/data/routes/route_result_5.txt",
     "Path of displayed route");
 DEFINE_string(map_dir, "/home/xmk/ponyai/PublicCourse/homework4/map/grid2/",
     "Directory path of map file");

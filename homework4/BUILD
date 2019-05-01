@@ -6,7 +6,6 @@ cc_binary(
     deps = [
         "//common/utils/file",
         "//homework4/map:map_lib",
-        "@boost//:functional",
         "@gflags",
         "@glog",
     ],
@@ -18,6 +17,17 @@ cc_binary(
     deps = [
         "//common/utils/file",
         "//homework4/display:main_window",
+        "//homework4/map:map_lib",
+        "@gflags",
+        "@glog",
+    ],
+)
+
+cc_binary(
+    name = "route_finder_main",
+    srcs = ["route_finder_main.cc"],
+    deps = [
+        "//common/utils/file",
         "//homework4/map:map_lib",
         "@gflags",
         "@glog",
