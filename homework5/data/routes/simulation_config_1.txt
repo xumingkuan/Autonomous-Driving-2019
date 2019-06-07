@@ -1,5 +1,5 @@
-agent_name: "pony_sample"
-agent_type: "sample_agent"
+agent_name: "xumingkuan"
+agent_type: "xumingkuan_agent"
 route {
   start_point {
     x: 120.289

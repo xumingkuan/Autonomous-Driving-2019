@@ -6,7 +6,9 @@
 #include "homework5/display/main_window.h"
 #include "homework5/proto/simulation_config.pb.h"
 
-DEFINE_string(route_file_path, "", "Path of route file");
+DEFINE_string(route_file_path,
+    "/home/xmk/ponyai/PublicCourse/homework5/data/routes/simulation_config_1.txt",
+    "Path of route file");
 
 namespace display {
 
