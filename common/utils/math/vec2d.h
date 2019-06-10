@@ -11,7 +11,6 @@
 
 #include <Eigen/Core>
 
-#include "common/proto/geometry.pb.h"
 #include "common/utils/containers/array_view.h"
 #include "common/utils/math/common.h"
 
@@ -29,8 +28,6 @@ struct Vec2 {
   Vec2() = default;
   Vec2(T x, T y);
   explicit Vec2(const Eigen::Matrix<T, 2, 1>& v) : x(v(0)), y(v(1)) {}
-  explicit Vec2(const interface::geometry::Point2D& v) : x(v.x()), y(v.y()) {}
-  explicit Vec2(const interface::geometry::Point3D& v) : x(v.x()), y(v.y()) {}
 
   static Vec2 FromUnit(T heading);
   static Vec2 FromLengthAndHeading(T length, T heading);
