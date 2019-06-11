@@ -16,3 +16,7 @@ targets:
   //homework4:map_visualizer_main
   //homework4:route_finder_main
   //homework5:simulation_main
+  //perception:evaluation_viewer_main
+  //perception:perception_evaluation_main
+  //pnc:replay_main
+  //pnc:simulation_main
